@@ -9,6 +9,7 @@ set HostName [lindex $argv 0]
 set Path [lindex $argv 1]
 set Type [lindex $argv 2]
 set EmailAddress [lindex $argv 3]
+set APACHECONF [lindex $argv 4]
 #set DomainList [lindex $argv 3] --> if domains passed in
 
 #eval spawn /etc/httpd/conf/ssl/letsencrypt/letsencrypt-auto certonly -a webroot --webroot-path /home/$DomainUserName/public_html --staging $DomainList --> if domains passed in

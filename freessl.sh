@@ -25,14 +25,14 @@ fi
 #TODO
 # The domains below need to be in an array (possibly auto read from vhost files
 
-HostName="demoserver.co.za"
-Path="/home/demoserv/public_html"
-Type="full"
+HostName="ssl.demoserver.co.za"
+Path="/home/ssldemos/public_html"
+Type="subdomain"
 EmailAddress="john@softsmart.co.za"
 
 rm -fr /etc/letsencrypt/live/$HostName*
 rm -fr /etc/letsencrypt/archive/$HostName*
 rm -fr /etc/letsencrypt/renewal/$HostName*.conf
 
-./freessl.exp "$HostName" "$Path" "$Type" "$EmailAddress"
+./freessl.exp "$HostName" "$Path" "$Type" "$EmailAddress" "$APACHECONF"
 
